@@ -48,7 +48,7 @@ textarea {
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: #ed2f25;
   color: white;
 }
 
@@ -57,7 +57,7 @@ textarea {
   color: white;
 }
 
-.saveBtn {
+.saveArea {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
