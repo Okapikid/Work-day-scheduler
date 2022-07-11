@@ -2,6 +2,7 @@
 var currentDate = moment().utcOffset(-240).format('LLLL');
 $("#currentDay").text(currentDate);
 
+// notification that will be added when appropriate save button clicked
 var notification = "Appointement added to local storage!"
 
 
@@ -25,8 +26,6 @@ function hourColor() {
 }
 hourColor();
 
-
-
 // add event to local storage when save button is clicked
 $(".saveArea").on("click", function () {
   var time = $(this).parent().attr("id");
@@ -35,6 +34,7 @@ $(".saveArea").on("click", function () {
   // sets the associated description in local storage
   localStorage.setItem(time, activity);
 
+  // notification that local storage has been added
   if (activity !== "") { document.getElementById("notice").textContent = notification };
 })
 

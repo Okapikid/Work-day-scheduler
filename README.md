@@ -8,6 +8,6 @@ Below that, there are time slots for the working hours of the day, from 9AM to 5
 <br>
 If a user clicks on a time slot, they can add in an activity for that time. Then, if they click the time slot's corresponding "save" icon to the right, the activity will be saved to local storage<br>
 <br>
-The deployed application can be found here: [link to deployed application](https://okapikid.github.io/Coding-Quiz/)
+The deployed application can be found here: [link to deployed application](https://okapikid.github.io/Work-day-scheduler/)
 
 Here is a screenshot of the project: ![Work Day Scheduler with a few time slots filled in](./Assets/Images/Screen%20shot.png)
