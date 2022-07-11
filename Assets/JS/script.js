@@ -5,34 +5,37 @@ $("#currentDay").text(currentDate);
 var notification = "Appointement added to local storage!"
 
 
-function hourColor () {
-// determine current hour from Moment
+function hourColor() {
+  // determine current hour from Moment
   var currentHour = moment().format("H");
- 
-// for each .description in container, add appropriate class based on current time
+
+  // for each .description in container, add appropriate class based on current time
   $(".description").each(function () {
     var blockHour = parseInt($(this).attr("id"));
-    
     if (blockHour < currentHour) {
       $(this).addClass("past");
-    } else if (blockHour === currentHour) {
+    } else if (blockHour == currentHour) {
       $(this).addClass("present");
     } else if (blockHour > currentHour) {
       $(this).addClass("future");
     }
+    console.log(blockHour);
+    console.log(currentHour);
   })
 }
 hourColor();
 
+
+
 // add event to local storage when save button is clicked
-$(".saveArea").on("click", function() {
+$(".saveArea").on("click", function () {
   var time = $(this).parent().attr("id");
   var activity = $(this).siblings(".description").val();
 
   // sets the associated description in local storage
   localStorage.setItem(time, activity);
-  
-  document.getElementById("notice").textContent = notification;
+
+  if (activity !== "") { document.getElementById("notice").textContent = notification };
 })
 
 // create local storage
@@ -45,4 +48,3 @@ $("#14time .description").val(localStorage.getItem("14time"));
 $("#15time .description").val(localStorage.getItem("15time"));
 $("#16time .description").val(localStorage.getItem("16time"));
 $("#17time .description").val(localStorage.getItem("17time"));
-  
